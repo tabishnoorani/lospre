@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tabishnoorani/lospre#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongoose": "^4.13.7",
     "react": "^16.2.0",
