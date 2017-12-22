@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
-const App = (props)=>{
-    return(
-        <h1 className='container'> Hello from React!!! The prop pass inside this component is {props.name}</h1>
-    )
-};
+class App extends Component {
+    constructor(props)
+    {
+        super();
+        this.state = {
+            name:'Fetching....'
+        }
+    }
+    componentDidMount() {
+        axios.get('/api/contests')
+        .then((doc)=>{
+            this.setState ({
+                name: doc.data.name
+            })
+        })
+        .catch((err)=>{console.log(err)});
+    }
 
-ReactDOM.render(<App name='123456'/>, document.getElementById('root'));
+    render() {
+        return(<h1>{this.state.name}</h1>)
+    }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'));
