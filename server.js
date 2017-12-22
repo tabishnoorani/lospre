@@ -8,10 +8,6 @@ const server = express();
 server.set ('view engine', 'ejs'); //it will look for ejs file in views folder.
 
 server.get('/', (req, res)=>{
-    res.send ('Hello from server Root');
-});
-
-server.get('/ejs', (req, res)=>{
     res.render ('index',{content: 'Hello from EJS'});
 });
 

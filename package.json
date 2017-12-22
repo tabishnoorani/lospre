@@ -2,7 +2,7 @@
   "name": "lospre",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon --exec babel-node server.js --ignore public/",
     "dev": "webpack -wd"
@@ -20,7 +20,9 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "json-loader": "^0.5.7",
     "mongoose": "^4.13.7",
+    "passport": "^0.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
